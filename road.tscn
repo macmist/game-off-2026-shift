@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjwhmxc3xl5wq"]
+
+[ext_resource type="Texture2D" uid="uid://bpeyd1n424m47" path="res://test.png" id="1_c07et"]
+[ext_resource type="Script" path="res://road.gd" id="2_rcnbw"]
+
+[node name="Road" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transparent = false
+texture_filter = 5
+texture = ExtResource("1_c07et")
+script = ExtResource("2_rcnbw")
