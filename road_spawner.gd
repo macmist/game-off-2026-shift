@@ -7,6 +7,7 @@ var generate_action = generate_sprites
 
 @export var size: int = 500
 var road: PackedScene = load("res://road.tscn")
+@export var camera: Camera3D
 
 		
 func generate_sprites():
@@ -29,6 +30,11 @@ func _ready() -> void:
 	
 
 func add_lanes():
-	for croad in get_children():
+	for i in get_child_count():
+		var croad: Road = get_child(i)
 		if croad is Road:
-			croad.add_lane()
+			var tween := create_tween()
+			tween.tween_interval(i * 0.05)
+			tween.tween_callback(func ():
+				croad.add_lane(camera and camera.is_position_in_frustum(croad.global_position)))
+			

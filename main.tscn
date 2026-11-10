@@ -15,7 +15,8 @@ script = ExtResource("2_m0la0")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.01782, -1.55062)
 current = true
 
-[node name="RoadSpawner" parent="." unique_id=1628805288 instance=ExtResource("2_fro5w")]
+[node name="RoadSpawner" parent="." unique_id=1628805288 node_paths=PackedStringArray("camera") instance=ExtResource("2_fro5w")]
+camera = NodePath("../Player/Camera3D")
 
 [node name="Road" type="Node3D" parent="RoadSpawner" unique_id=749921021 instance=ExtResource("3_lquwl")]
 script = ExtResource("5_272bh")
