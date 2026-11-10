@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://tggf1xxx1iuc"]
+
+[ext_resource type="Texture2D" uid="uid://bpeyd1n424m47" path="res://test.png" id="1_phwy2"]
+
+[node name="Lane" type="Sprite3D" unique_id=2107255213]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+texture = ExtResource("1_phwy2")

@@ -17,6 +17,18 @@ func generate_sprites():
 	
 	for i in size:
 		var sprite: Road = road.instantiate()
-		sprite.position.z = sprite.texture.get_height() * sprite.pixel_size * i
 		add_child(sprite)
+		sprite.add_to_group("roads")
+		sprite.position.z = sprite.get_height() * i
 		sprite.owner = get_tree().edited_scene_root
+
+func _ready() -> void:
+	print("Spawner rotation: ", rotation_degrees)
+	print("Spawner global rotation: ", global_rotation_degrees)
+	add_lanes()
+	
+
+func add_lanes():
+	for croad in get_children():
+		if croad is Road:
+			croad.add_lane()
