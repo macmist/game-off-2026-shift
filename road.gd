@@ -11,6 +11,16 @@ func get_height():
 	var size_3d = lane.texture.get_height() * lane.pixel_size
 	return size_3d
 
+func get_total_width():
+	var lane: Sprite3D = $Lanes/Lane
+	var size_3d = lane.texture.get_width() * lane.pixel_size * num_lanes
+	return size_3d
+
+func get_lane_width():
+	var lane: Sprite3D = $Lanes/Lane
+	var size_3d = lane.texture.get_width() * lane.pixel_size 
+	return size_3d
+
 func add_lane(animate: bool = false):
 	var new_lane = lane_scene.instantiate()
 	$Lanes.add_child(new_lane)

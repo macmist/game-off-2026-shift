@@ -12,7 +12,7 @@
 script = ExtResource("2_m0la0")
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=1804431941]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.01782, -1.55062)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0)
 current = true
 
 [node name="RoadSpawner" parent="." unique_id=1628805288 node_paths=PackedStringArray("camera") instance=ExtResource("2_fro5w")]
